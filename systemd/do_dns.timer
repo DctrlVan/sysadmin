@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily update of dctrl.ca DNS record
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+Unit=do_dns.service
+RandomizedDelaySec=30m
+
+[Install]
+WantedBy=timers.target

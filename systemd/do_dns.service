@@ -1,0 +1,7 @@
+[Unit]
+Description=Update Digital Ocean DNS record for dctrl.ca
+
+[Service]
+Type=oneshot
+User=kiko
+ExecStart=/home/kiko/code/clone/DigitalOceanDynDNS/do_dns_update.sh -u -s "@" dctrl.ca
