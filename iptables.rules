@@ -1,0 +1,13 @@
+*filter
+:INPUT ACCEPT [713:207805]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [615:123154]
+
+# limit to 6 connections to bitcoin
+-A INPUT -p tcp -m tcp --dport 8333 --tcp-flags FIN,SYN,RST,ACK SYN -m connlimit --connlimit-above 6 --connlimit-mask 0 --connlimit-saddr -j REJECT --reject-with tcp-reset
+
+# except for the following whitelisted ip's
+-A INPUT -s 24.86.29.0/24 -p tcp -m tcp --dport 8333 --tcp-flags FIN,SYN,RST,ACK SYN -j ACCEPT
+-A INPUT -s 192.0.0.0/8 -p tcp -m tcp --dport 8333 --tcp-flags FIN,SYN,RST,ACK SYN -j ACCEPT
+-A INPUT -s 23.94.96.232/32 -p tcp -m tcp --dport 8333 --tcp-flags FIN,SYN,RST,ACK SYN -j ACCEPT
+COMMIT
