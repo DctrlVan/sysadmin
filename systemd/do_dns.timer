@@ -2,10 +2,10 @@
 Description=Daily update of dctrl.ca DNS record
 
 [Timer]
-OnCalendar=daily
+OnCalendar=0/2:00:00
 Persistent=true
 Unit=do_dns.service
-RandomizedDelaySec=30m
+RandomizedDelaySec=10m
 
 [Install]
 WantedBy=timers.target
