@@ -1,0 +1,47 @@
+Host sidewalk
+  Port=9878
+  Hostname=192.168.0.98
+
+Host sidewalk-ext
+  Port=9878
+  Hostname=dctrl.ca
+
+Host imac
+  Hostname 192.168.1.48
+  Port 9226
+
+Host imac-ext
+  Hostname dctrl.ca
+  Port 9226
+
+Host hashi
+  Hostname 192.168.0.44
+  Port 9227
+
+Host hashi-ext
+  Hostname dctrl.ca
+  Port 9227
+
+Host kegbot
+  Hostname 192.168.0.11
+  Port 9454
+
+Host kegbot-ext
+  Hostname dctrl.ca
+  Port 9454
+
+Host vault
+  Hostname 192.168.0.14
+  Port 9676
+
+Host vault-ext
+  Hostname dctrl.ca
+  Port 9676
+
+Host bitpepsi
+  Port=9455
+  HostName 192.168.0.12
+
+Host bitpepsi-ext
+  Port=9455
+  HostName dctrl.ca
